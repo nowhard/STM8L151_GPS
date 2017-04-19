@@ -28,6 +28,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8l15x_it.h"
+#include "main.h"
 
 /** @addtogroup STM8L15x_StdPeriph_Template
   * @{

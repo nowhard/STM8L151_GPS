@@ -1594,6 +1594,9 @@
   <group>
     <name>spl</name>
     <file>
+      <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_adc.c</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_clk.c</name>
     </file>
     <file>

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<Workspace>
-  <ConfigDictionary>
-    <CurrentConfigs>
-      <Project>stm8l151gps/Debug</Project>
-    </CurrentConfigs>
-  </ConfigDictionary>
+<Project>
   <Desktop>
     <Static>
+      <Debug-Log>
+        <ColumnWidth0>20</ColumnWidth0>
+        <ColumnWidth1>1860</ColumnWidth1>
+      </Debug-Log>
       <Build>
         <ColumnWidth0>20</ColumnWidth0>
         <ColumnWidth1>1395</ColumnWidth1>
@@ -16,87 +15,83 @@
       </Build>
       <Workspace>
         <ColumnWidths>
-          <Column0>222</Column0>
+          <Column0>124</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
-          <Column3>0</Column3>
+          <Column3>27</Column3>
         </ColumnWidths>
       </Workspace>
-      <Find-All-Declarations>
+      <Disassembly>
+        <col-names>
+          <item>Disassembly</item>
+          <item>_I0</item>
+        </col-names>
+        <col-widths>
+          <item>500</item>
+          <item>20</item>
+        </col-widths>
+        <DisasmHistory/>
+        <ShowCodeCoverage>1</ShowCodeCoverage>
+        <ShowInstrProfiling>1</ShowInstrProfiling>
+      </Disassembly>
+      <TerminalIO>
         <PreferedWindows>
-          <Position>3</Position>
-          <ScreenPosX>0</ScreenPosX>
-          <ScreenPosY>0</ScreenPosY>
-          <Windows>
-            <Window>
-              <Factory>Build</Factory>
-            </Window>
-          </Windows>
-        </PreferedWindows>
-        <ColumnWidth0>664</ColumnWidth0>
-        <ColumnWidth1>94</ColumnWidth1>
-        <ColumnWidth2>1138</ColumnWidth2>
-      </Find-All-Declarations>
-      <DRIVER_CUSTOM_SFR>
-        <PreferedWindows>
-          <Position>3</Position>
+          <Position>2</Position>
           <ScreenPosX>0</ScreenPosX>
           <ScreenPosY>0</ScreenPosY>
           <Windows/>
         </PreferedWindows>
-        <col-names>
-          <item>Access</item>
-          <item>Address</item>
-          <item>Name</item>
-          <item>Size</item>
-          <item>Zone</item>
-          <item>_I0</item>
-        </col-names>
-        <col-widths>
-          <item>120</item>
-          <item>150</item>
-          <item>150</item>
-          <item>50</item>
-          <item>120</item>
-          <item>20</item>
-        </col-widths>
-      </DRIVER_CUSTOM_SFR>
-      <TerminalIO/>
+        <InputSource>1</InputSource>
+        <InputMode>10</InputMode>
+        <Filename>$PROJ_DIR$\TermIOInput.txt</Filename>
+        <InputEcho>1</InputEcho>
+        <ShowReset>0</ShowReset>
+      </TerminalIO>
     </Static>
     <Windows>
-      <Wnd2>
+      <Wnd0>
         <Tabs>
           <Tab>
-            <Identity>TabID-5781-26675</Identity>
+            <Identity>TabID-22616-2802</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-22094-2812</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
           </Tab>
-          <Tab>
-            <Identity>TabID-30251-14941</Identity>
-            <TabName>Declarations</TabName>
-            <Factory>Find-All-Declarations</Factory>
-            <Session/>
-          </Tab>
         </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd2>
-      <Wnd3>
+        <SelectedTab>1</SelectedTab>
+      </Wnd0>
+      <Wnd1>
         <Tabs>
           <Tab>
-            <Identity>TabID-16530-26678</Identity>
+            <Identity>TabID-597-2806</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
               <NodeDict>
                 <ExpandedNode>stm8l151gps</ExpandedNode>
-                <ExpandedNode>stm8l151gps/spl</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd3>
+      </Wnd1>
+      <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-11345-2809</Identity>
+            <TabName>Disassembly</TabName>
+            <Factory>Disassembly</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        <SelectedTab>0</SelectedTab>
+      </Wnd2>
     </Windows>
     <Editor>
       <Pane>
@@ -108,9 +103,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>16</YPos2>
-          <SelStart2>877</SelStart2>
-          <SelEnd2>877</SelEnd2>
+          <YPos2>6</YPos2>
+          <SelStart2>868</SelStart2>
+          <SelEnd2>868</SelEnd2>
         </Tab>
         <ActiveTab>0</ActiveTab>
         <Tab>
@@ -161,78 +156,6 @@
           <SelStart2>128443</SelStart2>
           <SelEnd2>128443</SelEnd2>
         </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\stm8l15x_it.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>9</YPos2>
-          <SelStart2>1378</SelStart2>
-          <SelEnd2>1378</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_gpio.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>89</YPos2>
-          <SelStart2>5974</SelStart2>
-          <SelEnd2>5974</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\STM8L15x_StdPeriph_Driver\inc\stm8l15x_gpio.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>134</YPos2>
-          <SelStart2>5627</SelStart2>
-          <SelEnd2>5627</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_exti.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>142</YPos2>
-          <SelStart2>6857</SelStart2>
-          <SelEnd2>6857</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\main.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>34</SelStart2>
-          <SelEnd2>343</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\STM8L15x_StdPeriph_Driver\inc\stm8l15x_adc.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>306</YPos2>
-          <SelStart2>14272</SelStart2>
-          <SelEnd2>14280</SelEnd2>
-        </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -253,40 +176,61 @@
           </Sizes>
         </Row0>
         <Row1>
-          <Sizes/>
+          <Sizes>
+            <Toolbar-0F1D9A58>
+              <key>debuggergui.enu1</key>
+            </Toolbar-0F1D9A58>
+          </Sizes>
         </Row1>
       </Top>
       <Left>
         <Row0>
           <Sizes>
-            <Wnd3>
+            <Wnd1>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
-                <Bottom>743</Bottom>
-                <Right>296</Right>
+                <Bottom>719</Bottom>
+                <Right>198</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
                 <sizeHorzCX>104167</sizeHorzCX>
                 <sizeHorzCY>202634</sizeHorzCY>
-                <sizeVertCX>155208</sizeVertCX>
-                <sizeVertCY>754813</sizeVertCY>
+                <sizeVertCX>104167</sizeVertCX>
+                <sizeVertCY>730496</sizeVertCY>
               </Rect>
-            </Wnd3>
+            </Wnd1>
           </Sizes>
         </Row0>
       </Left>
       <Right>
         <Row0>
-          <Sizes/>
+          <Sizes>
+            <Wnd2>
+              <Rect>
+                <Top>-2</Top>
+                <Left>-2</Left>
+                <Bottom>719</Bottom>
+                <Right>584</Right>
+                <x>-2</x>
+                <y>-2</y>
+                <xscreen>200</xscreen>
+                <yscreen>200</yscreen>
+                <sizeHorzCX>104167</sizeHorzCX>
+                <sizeHorzCY>202634</sizeHorzCY>
+                <sizeVertCX>305208</sizeVertCX>
+                <sizeVertCY>730496</sizeVertCY>
+              </Rect>
+            </Wnd2>
+          </Sizes>
         </Row0>
       </Right>
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd2>
+            <Wnd0>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -301,7 +245,7 @@
                 <sizeVertCX>104167</sizeVertCX>
                 <sizeVertCY>202634</sizeVertCY>
               </Rect>
-            </Wnd2>
+            </Wnd0>
           </Sizes>
         </Row0>
       </Bottom>
@@ -310,6 +254,6 @@
       </Float>
     </Positions>
   </Desktop>
-</Workspace>
+</Project>
 
 
