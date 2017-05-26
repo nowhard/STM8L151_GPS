@@ -257,10 +257,11 @@
         </option>
         <option>
           <name>CCIncludePath2</name>
-          <state>D:\PROJECTS\STM8L151_GPS\iar_project</state>
-          <state>D:\PROJECTS\STM8L151_GPS\iar_project\STM8L15x_StdPeriph_Driver</state>
-          <state>D:\PROJECTS\STM8L151_GPS\iar_project\STM8L15x_StdPeriph_Driver\inc</state>
-          <state>D:\PROJECTS\STM8L151_GPS\iar_project\STM8L15x_StdPeriph_Driver\src</state>
+          <state>$PROJ_DIR$\STM8L15x_StdPeriph_Driver</state>
+          <state>$PROJ_DIR$</state>
+          <state>$PROJ_DIR$\..\..</state>
+          <state>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src</state>
+          <state>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\inc</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>

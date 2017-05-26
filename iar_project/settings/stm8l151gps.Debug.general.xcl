@@ -1,8 +1,8 @@
 "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\bin\stm8proc.dll" 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\bin\stm8sim.dll" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\bin\stm8stlink.dll" 
 
-"D:\PROJECTS\STM8L151_GPS\iar_project\main.c" 
+"E:\PROJECTS\GIT_REPOSITORY\STM8\STM8L151_GPS\iar_project\Debug\Exe\stm8l151gps.out" 
 
 --plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\bin\stm8bat.dll" 
 

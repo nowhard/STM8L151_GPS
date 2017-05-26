@@ -63,8 +63,12 @@ ActionState=1
 [Trace1]
 Enabled=0
 ShowSource=1
+[Simulator]
+Freq=16000000
+[Breakpoints]
+Count=0
 [Aliases]
 Count=0
 SuppressDialog=0
-[Simulator]
-Freq=16000000
+[DebuggerSettings]
+DisableInterruptsWhenStepping=0
