@@ -1624,6 +1624,9 @@
   </file>
   <file>
     <name>$PROJ_DIR$\stm8l15x_it.c</name>
+    <excluded>
+      <configuration>Debug</configuration>
+    </excluded>
   </file>
 </project>
 
