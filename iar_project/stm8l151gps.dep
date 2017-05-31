@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>1617505689</fileChecksum>
+  <fileChecksum>1852865847</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -83,6 +83,7 @@
       <file>$PROJ_DIR$\Debug\Obj\main.o</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_rtc.__cstat.et</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_exti.o</file>
+      <file>$PROJ_DIR$\spi_command.h</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_adc.__cstat.et</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_it.__cstat.et</file>
     </outputs>
@@ -95,7 +96,7 @@
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 77</file>
+          <file> 78</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -320,7 +321,7 @@
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 78</file>
+          <file> 79</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -357,11 +358,11 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10 62</file>
+          <file> 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10 62 77</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 10 41 11 15 42 31 14 33 49 13 32 30 23 40 43 44 62 63 58 36 57 38 39 61 56 34 35 55 59 64 60 16</file>
+          <file> 11 10 41 15 42 31 14 33 49 77 13 32 30 23 40 43 44 62 63 58 36 57 38 39 61 56 34 35 55 59 64 60 16</file>
         </tool>
       </inputs>
     </file>

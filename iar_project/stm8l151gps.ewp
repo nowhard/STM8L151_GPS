@@ -1623,6 +1623,9 @@
     <name>$PROJ_DIR$\main.c</name>
   </file>
   <file>
+    <name>$PROJ_DIR$\spi_command.h</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\stm8l15x_it.c</name>
     <excluded>
       <configuration>Debug</configuration>

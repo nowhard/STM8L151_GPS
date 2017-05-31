@@ -1,5 +1,9 @@
 #include "stm8l15x.h"
 #include "main.h"
+#include "spi_command.h"
+
+enStateMachine StateMachine;
+stDevParams DevParams;
 
 void Keys_Init(void);
 void EXTI_Init(void);
@@ -10,8 +14,13 @@ void RTC_Calendar_Init(void);
 
 uint16_t ADC_GetVcc(void);
 
+void StateMachine(void);
+
 void main(void)
 {
+  DevParams.wakeupSource=WAKEUP_NONE;
+  StateMachine = STATE_WAIT_COMMAND;
+  
   Keys_Init();
   EXTI_Init();
   RTC_Calendar_Init();
@@ -21,9 +30,11 @@ void main(void)
   enableInterrupts();
   while (1)
   {
-
+      StateMachine();
   }
 }
+
+//Подтянуть к GND неиспользуемые выводы
 
 void Keys_Init(void)
 {
@@ -49,6 +60,7 @@ void SPI_Slave_Init(void)
            SPI_Direction_2Lines_FullDuplex,SPI_NSS_Hard,0);
    
    SPI_ITConfig(SPI1,SPI_IT_RXNE,ENABLE);
+   SPI_Cmd(SPI1,ENABLE); 
   
 }
 
@@ -149,11 +161,30 @@ uint16_t ADC_GetVcc(void)
   
   return (uint16_t)res; 
 }
+
+//-----------------------------------------------------------------------------
+void StateMachine(void)
+{
+    switch(StateMachine)
+    {
+        case STATE_WAKEUP:
+        {
+        }
+        break;
+        
+        case STATE_WAIT_COMMAND:
+        {
+        }
+        break;
+    }
+}
 //-----------------------------------------------------------------------------
 INTERRUPT_HANDLER(EXTI3_IRQHandler,11)
 {
   //Запустить выполнение задачи с параметром-экстренное просыпание
   EXTI_ClearITPendingBit (EXTI_IT_Pin3);
+  DevParams.wakeupSource=WAKEUP_ACCEL;
+  
 }
 
 
@@ -163,6 +194,7 @@ INTERRUPT_HANDLER(RTC_CSSLSE_IRQHandler,4)
  // RTC_ClearITPendingBit(RTC_IT_WUT); 
   //Запустить выполнение задачи с параметром-периодическое просыпание
   RTC_ClearITPendingBit(RTC_IT_ALRA); 
+  DevParams.wakeupSource=WAKEUP_RTC;
 }
 
 
@@ -170,3 +202,5 @@ INTERRUPT_HANDLER(SPI1_IRQHandler,26)
 {
     SPI_ClearITPendingBit(SPI1,SPI_IT_RXNE);     
 }
+
+//Необходимо ли просыпание от кнопки?
