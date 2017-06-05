@@ -4,6 +4,7 @@
 
 enStateMachine StateMachine;
 stDevParams DevParams;
+stSPICommand SPICommand;
 
 void Keys_Init(void);
 void EXTI_Init(void);
@@ -13,8 +14,10 @@ void RTC_WakeUp_Init(void);
 void RTC_Calendar_Init(void);
 
 uint16_t ADC_GetVcc(void);
+void Modules_PowerON(void);
+void Modules_PowerOFF(void);
 
-void StateMachine(void);
+void CycleStateMachine(void);
 
 void main(void)
 {
@@ -30,7 +33,7 @@ void main(void)
   enableInterrupts();
   while (1)
   {
-      StateMachine();
+      CycleStateMachine();
   }
 }
 
@@ -162,13 +165,28 @@ uint16_t ADC_GetVcc(void)
   return (uint16_t)res; 
 }
 
+
 //-----------------------------------------------------------------------------
-void StateMachine(void)
+void Modules_PowerON(void)
+{
+    
+}
+
+void Modules_PowerOFF(void)
+{
+    
+}
+//-----------------------------------------------------------------------------
+void CycleStateMachine(void)
 {
     switch(StateMachine)
     {
         case STATE_WAKEUP:
         {
+          //Считать параметры и время просыпания 
+          
+          //Разбудить модули
+          Modules_PowerON();
         }
         break;
         
@@ -176,6 +194,17 @@ void StateMachine(void)
         {
         }
         break;
+        
+        case STATE_HANDLE_COMMAND:
+        {
+            SPI_HandleCommand(&SPICommand);
+        }
+        break;
+        
+        default:
+        {
+            
+        }
     }
 }
 //-----------------------------------------------------------------------------
@@ -200,7 +229,56 @@ INTERRUPT_HANDLER(RTC_CSSLSE_IRQHandler,4)
 
 INTERRUPT_HANDLER(SPI1_IRQHandler,26)
 {
-    SPI_ClearITPendingBit(SPI1,SPI_IT_RXNE);     
+    SPI_ClearITPendingBit(SPI1,SPI_IT_RXNE); 
+    if(SPICommand.bufCnt==0)
+    {
+      SPICommand.cmd=SPI_ReceiveData(SPI1);
+      SPICommand.bufCnt++;
+    }
+    else
+    {
+        switch(SPICommand.cmd)
+        {
+          case SET_TIME:
+          {
+              
+          }
+          break;
+          
+          case SET_ALARM:
+          {
+            
+          }
+          break;
+          
+          case GET_TIME:
+          {
+            
+          }
+          break;
+                  
+          CASE GET_ALARM:
+          {
+          }
+          BREAK; 
+          
+          CASE GET_BATTERY:
+          {
+          }
+          BREAK;  
+          
+          CASE GET_STATUS:
+          {
+          }
+          BREAK;    
+          
+          default:
+          {
+            
+          }
+          break;            
+        }
+    }
 }
 
 //Необходимо ли просыпание от кнопки?

@@ -43,7 +43,7 @@ typedef enum
 //   STATE_GET_VBAT,
 //   STATE_GET_TIME,
    STATE_WAIT_COMMAND,
-   STATE_ ,
+   STATE_HANDLE_COMMAND,
    STATE_HALT, 
 }enStateMachine;
 
