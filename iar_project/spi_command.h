@@ -31,7 +31,8 @@ typedef struct
 #define GET_BATTERY_CMD_LEN     2
 #define SET_SLEEP_CMD_LEN       1
 
-
-void SPI_HandleCommand(stSPICommand SPICommand);
+void SPI_Slave_Init(void);
+void SPI_HandleCommand(stSPICommand *SPICommand);
+void SPI_HandleInterrupt(stSPICommand *SPICommand);
 
 #endif

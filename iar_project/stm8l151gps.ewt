@@ -1968,13 +1968,22 @@
     </file>
   </group>
   <file>
+    <name>$PROJ_DIR$\adc_bat.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\external_signals.c</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\main.c</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\spi_command.c</name>
+    <name>$PROJ_DIR$\power.c</name>
   </file>
   <file>
-    <name>$PROJ_DIR$\spi_command.h</name>
+    <name>$PROJ_DIR$\rtc.c</name>
+  </file>
+  <file>
+    <name>$PROJ_DIR$\spi_command.c</name>
   </file>
   <file>
     <name>$PROJ_DIR$\stm8l15x_it.c</name>
