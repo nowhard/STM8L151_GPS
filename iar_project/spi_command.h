@@ -19,7 +19,7 @@ typedef struct
   enSPICommand cmd;
   uint8_t cmdBuf[MAX_SPI_CMD_LEN];
   uint8_t bufCnt;
-}stSPICommand
+}stSPICommand;
 
 //CMD len in bytes
 

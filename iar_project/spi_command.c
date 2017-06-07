@@ -1,5 +1,6 @@
-#include "spi_command.h"
 #include "stm8l15x.h"
+#include "spi_command.h"
+
 
 void SPI_Slave_Init(void)
 {
