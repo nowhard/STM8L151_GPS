@@ -15,6 +15,7 @@
 
 
 void Buttons_Init(void);
+void GPIO_Unused_Init(void);
 void EXTI_Init(void);
 
 #endif

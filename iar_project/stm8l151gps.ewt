@@ -1983,6 +1983,9 @@
     <name>$PROJ_DIR$\rtc.c</name>
   </file>
   <file>
+    <name>$PROJ_DIR$\settings.c</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\spi_command.c</name>
   </file>
   <file>

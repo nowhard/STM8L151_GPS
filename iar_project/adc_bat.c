@@ -1,5 +1,6 @@
-#include "adc_bat.h"
 #include "stm8l15x.h"
+#include "adc_bat.h"
+
 
 void ADC_Bat_Init(void)
 {

@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2873346618</fileChecksum>
+  <fileChecksum>4256137943</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -94,6 +94,10 @@
       <file>$PROJ_DIR$\Debug\Obj\power.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\adc_bat.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\adc_bat.o</file>
+      <file>$PROJ_DIR$\settings.h</file>
+      <file>$PROJ_DIR$\settings.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\settings.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\settings.o</file>
       <file>$PROJ_DIR$\external_signals.h</file>
       <file>$PROJ_DIR$\external_signals.c</file>
       <file>$PROJ_DIR$\power.h</file>
@@ -115,7 +119,7 @@
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 93</file>
+          <file> 97</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -340,7 +344,7 @@
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 94</file>
+          <file> 98</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -362,6 +366,10 @@
       <name>$PROJ_DIR$\main.c</name>
       <outputs>
         <tool>
+          <name>ICCSTM8</name>
+          <file> 74</file>
+        </tool>
+        <tool>
           <name>__cstat</name>
           <file> 37</file>
         </tool>
@@ -373,11 +381,11 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10 62 77 90 81 83 88</file>
+          <file> 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10 62 77 94 81 83 92</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 49 14 31 33 41 36 81 10 15 11 42 77 88 13 32 30 23 40 43 44 62 90 83 63 58 57 38 39 61 56 34 35 55 59 64 60 16</file>
+          <file> 44 30 13 40 41 81 32 23 43 77 92 10 31 15 14 11 33 42 49 62 94 83 63 58 36 57 38 39 61 56 34 35 55 59 64 60 16</file>
         </tool>
       </inputs>
     </file>
@@ -392,7 +400,7 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 45 74 54 9 76 17 18 19 20 21 48 47</file>
+          <file> 45 87 100 74 84 95 101 54 9 76 17 18 19 20 21 48 47</file>
         </tool>
       </inputs>
     </file>
@@ -400,24 +408,32 @@
       <name>$PROJ_DIR$\spi_command.c</name>
       <outputs>
         <tool>
+          <name>ICCSTM8</name>
+          <file> 101</file>
+        </tool>
+        <tool>
           <name>BICOMP</name>
-          <file> 98</file>
+          <file> 102</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 77 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10</file>
+          <file> 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10 77 62</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 13 41 40 30 44 32 23 43 10 31 15 14 11 33 42 49 36 63 58 57 38 39 61 56 34 35 55 59 64 60 16 77</file>
+          <file> 41 34 38 64 36 61 55 16 62 63 58 57 39 56 35 59 60 77 10 13 31 32 15 30 14 23 11 40 33 43 42 44 49</file>
         </tool>
       </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\adc_bat.c</name>
       <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 87</file>
+        </tool>
         <tool>
           <name>BICOMP</name>
           <file> 86</file>
@@ -426,11 +442,11 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 81 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10</file>
+          <file> 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10 81</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 44 30 13 40 41 32 23 43 10 31 15 14 11 33 42 49 36 63 58 57 38 39 61 56 34 35 55 59 64 60 16 81</file>
+          <file> 16 61 36 55 41 38 34 64 63 58 57 39 56 35 59 60 81 10 13 31 32 15 30 14 23 11 40 33 43 42 44 49</file>
         </tool>
       </inputs>
     </file>
@@ -449,11 +465,11 @@
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 90 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10</file>
+          <file> 94 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 43 32 23 13 30 40 44 41 10 31 15 14 11 33 42 49 36 63 58 57 38 39 61 56 34 35 55 59 64 60 16 90</file>
+          <file> 43 32 23 13 30 40 44 41 10 31 15 14 11 33 42 49 36 63 58 57 38 39 61 56 34 35 55 59 64 60 16 94</file>
         </tool>
       </inputs>
     </file>
@@ -462,11 +478,11 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 91</file>
+          <file> 95</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 92</file>
+          <file> 96</file>
         </tool>
       </outputs>
       <inputs>
@@ -481,32 +497,51 @@
       </inputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\external_signals.c</name>
+      <name>$PROJ_DIR$\settings.c</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 96</file>
+          <file> 91</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 95</file>
+          <file> 90</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 88 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10</file>
+          <file> 88</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 55 36 61 16 41 38 34 64 63 58 57 39 56 35 59 60 10 13 31 32 15 30 14 23 11 40 33 43 42 44 49 88</file>
+          <file> 88</file>
         </tool>
       </inputs>
     </file>
-    <forcedrebuild>
-      <name>[MULTI_TOOL]</name>
-      <tool>ILINK</tool>
-    </forcedrebuild>
+    <file>
+      <name>$PROJ_DIR$\external_signals.c</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 100</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 99</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 92 41 63 13 58 31 36 32 57 15 38 30 39 14 61 23 56 11 34 40 35 33 55 43 59 42 64 44 60 49 16 10</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 10 41 15 42 31 14 33 49 13 32 30 23 40 43 44 36 63 58 57 38 39 61 56 34 35 55 59 64 60 16 92</file>
+        </tool>
+      </inputs>
+    </file>
   </configuration>
   <configuration>
     <name>Release</name>
