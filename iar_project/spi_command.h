@@ -38,7 +38,7 @@ typedef struct
 #define SPI_NO_NEED_HANDLE_CMD  0
 
 void SPI_Slave_Init(void);
-void SPI_HandleCommand(stSPICommand *SPICommand);
+enStateMachine SPI_HandleCommand(stSPICommand *SPICommand);
 uint8_t SPI_HandleInterrupt(stSPICommand *SPICommand);
 
 #endif

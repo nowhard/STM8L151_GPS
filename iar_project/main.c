@@ -54,8 +54,7 @@ void CycleStateMachine(void)
         
         case STATE_HANDLE_COMMAND:
         {
-            SPI_HandleCommand(&SPICommand);
-            StateMachine=STATE_WAIT_COMMAND;
+           StateMachine=SPI_HandleCommand(&SPICommand);      
         }
         break;
         
