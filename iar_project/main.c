@@ -15,17 +15,19 @@ void CycleStateMachine(void);
 void main(void)
 {
   DevParams.wakeupSource=WAKEUP_NONE;
-  StateMachine = STATE_WAIT_COMMAND;
+  StateMachine = STATE_WAIT_COMMAND_PON;
+ 
+  CLK_SYSCLKDivConfig(CLK_SYSCLKDiv_1); 
   
   GPIO_Unused_Init();
   Buttons_Init();
   Modules_PowerInit();
-  EXTI_Init();
-  RTC_Calendar_Init();
-  SPI_Slave_Init();
-  ADC_Bat_Init();
+//  EXTI_Init();
+//  RTC_Calendar_Init();
+//  SPI_Slave_Init();
+//  ADC_Bat_Init();
   
-  enableInterrupts();
+//  enableInterrupts();
   while (1)
   {
       CycleStateMachine();
@@ -40,29 +42,43 @@ void CycleStateMachine(void)
         case STATE_WAKEUP:
         {
           //Считать параметры 
-          DevParams.batteryValue=ADC_GetVcc();
+          //DevParams.batteryValue=ADC_GetVcc();
           
           //Разбудить модули
           Modules_PowerON();
+          StateMachine=STATE_WAIT_COMMAND_POFF;
         }
         break;
         
-        case STATE_WAIT_COMMAND:
+        case STATE_WAIT_COMMAND_PON:
         {
+            if(Button_Pressed()==BUTTON_1_PRESSED)
+            {
+                StateMachine=STATE_WAKEUP;
+            }
         }
         break;
         
-        case STATE_HANDLE_COMMAND:
+        case STATE_WAIT_COMMAND_POFF:
         {
-           StateMachine=SPI_HandleCommand(&SPICommand);      
+            if(Button_Pressed()==BUTTON_2_PRESSED)
+            {
+                StateMachine=STATE_HALT;
+            }
         }
-        break;
+        break;        
         
+//        case STATE_HANDLE_COMMAND:
+//        {
+//           StateMachine=SPI_HandleCommand(&SPICommand);      
+//        }
+//        break;
+//        
         case STATE_HALT:
         {
             Modules_PowerOFF();
-            StateMachine=STATE_WAIT_COMMAND;
-            halt();
+            StateMachine=STATE_WAIT_COMMAND_PON;
+ //           halt();
         }
         break;
         

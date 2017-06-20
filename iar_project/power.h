@@ -1,6 +1,9 @@
 #ifndef POWER_H
 #define POWER_H
 
+#define PWR_STAT_SIM_PORT  GPIOB
+#define PWR_STAT_SIM_PIN   GPIO_Pin_1 
+
 #define PWR_SIM_PORT  GPIOB
 #define PWR_SIM_PIN  GPIO_Pin_2 
 

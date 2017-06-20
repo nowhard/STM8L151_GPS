@@ -1,6 +1,7 @@
 #include "stm8l15x.h"
-#include "spi_command.h"
 #include "main.h"
+#include "spi_command.h"
+
 #include "power.h"
 
 RTC_TimeTypeDef   RTC_TimeStr;
@@ -32,7 +33,7 @@ enStateMachine SPI_HandleCommand(stSPICommand *SPICommand)
             
             RTC_DateStr.RTC_Year=SPICommand->cmdBuf[3];
             RTC_DateStr.RTC_Month=SPICommand->cmdBuf[4];
-            RTC_DateStr.RTC_Day=SPICommand->cmdBuf[5];
+            RTC_DateStr.RTC_WeekDay=SPICommand->cmdBuf[5];
             
             RTC_SetTime(RTC_Format_BIN, &RTC_TimeStr);
             RTC_SetDate(RTC_Format_BIN, &RTC_DateStr);
@@ -41,9 +42,9 @@ enStateMachine SPI_HandleCommand(stSPICommand *SPICommand)
         
         case SET_ALARM:
         {
-            RTC_AlarmStr.RTC_Hours=SPICommand->cmdBuf[0];
-            RTC_AlarmStr.RTC_Minutes=SPICommand->cmdBuf[1];
-            RTC_AlarmStr.RTC_Seconds=SPICommand->cmdBuf[2];
+            RTC_AlarmStr.RTC_AlarmTime.RTC_Hours=SPICommand->cmdBuf[0];
+            RTC_AlarmStr.RTC_AlarmTime.RTC_Minutes=SPICommand->cmdBuf[1];
+            RTC_AlarmStr.RTC_AlarmTime.RTC_Seconds=SPICommand->cmdBuf[2];
             
             RTC_SetAlarm(RTC_Format_BIN, &RTC_AlarmStr);
         }
@@ -51,7 +52,7 @@ enStateMachine SPI_HandleCommand(stSPICommand *SPICommand)
         
         case SET_SLEEP:
         {
-           return STATE_HALT       
+           return STATE_HALT;       
         }
         break;
         
@@ -83,7 +84,7 @@ enStateMachine SPI_HandleCommand(stSPICommand *SPICommand)
         break;
     }
     
-    return STATE_WAIT_COMMAND;
+    return 0;//STATE_WAIT_COMMAND;
 }
 
 uint8_t SPI_HandleInterrupt(stSPICommand *SPICommand)

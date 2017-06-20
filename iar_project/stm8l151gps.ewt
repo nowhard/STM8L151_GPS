@@ -1971,6 +1971,9 @@
     <name>$PROJ_DIR$\adc_bat.c</name>
   </file>
   <file>
+    <name>$PROJ_DIR$\delay.c</name>
+  </file>
+  <file>
     <name>$PROJ_DIR$\external_signals.c</name>
   </file>
   <file>
