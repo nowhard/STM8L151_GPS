@@ -10,6 +10,7 @@ void Modules_PowerInit(void)
    
    GPIO_WriteBit(PWR_SIM_PORT,PWR_SIM_PIN,RESET);
    GPIO_WriteBit(PWR_GPS_PORT,PWR_GPS_PIN,RESET);
+   //GPIO_WriteBit(PWR_GPS_PORT,PWR_GPS_PIN,SET);
    GPIO_WriteBit(PWR_KEY_PORT,PWR_KEY_PIN,SET); 
    
    
@@ -18,7 +19,7 @@ void Modules_PowerInit(void)
    GPIO_WriteBit(PWR_STAT_SIM_PORT,PWR_STAT_SIM_PIN,RESET);
 }
 
-#define DELAY_SIM_POWER_START   1000
+#define DELAY_SIM_POWER_START   1500
 #define DELAY_SIM_POWER_STOP   200
 #define DELAY_SIM_ON_OFF        2500
 
